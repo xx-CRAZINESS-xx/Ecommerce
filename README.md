@@ -1,22 +1,30 @@
-Create an environment
+# Demo
+
+![caption](https://github.com/xx-CRAZINESS-xx/Ecommerce/blob/main/Video/market.gif)
+
+
+# Run Locally
+
+#### Create an environment
 
 ```
 conda create -n flask_app python=3.7 -y
 ```
 
-Activate the environment
+#### Activate the environment
 
 ```
 conda activate flask_app
 ```
 
-Install the requirements
+#### Install the requirements
 
 ```
 pip install -r requirements.txt
 ```
+# Additional commands
 
-To create a new product or user through terminal
+#### To create a new product or user through terminal
 ```
 python
 from market import db
@@ -32,17 +40,16 @@ Item.query.all()
 User.query.all()
 ```
 
-To filter a product/user through terminal
+#### To filter a product/user through terminal
 
 ```
-
 item1=Item.query.filter_by(name='IPhone 13 Pro Max').first()
 item1.owner=User.query.filter_by(user_name=' ').first()
 ```
 
-To get the secret key through terminal
+#### To get the secret key through terminal
 ```
-- python
-- import os
-- os.urandom(12).hex()
+python
+import os
+os.urandom(12).hex()
 ```
